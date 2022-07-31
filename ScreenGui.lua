@@ -66,5 +66,5 @@ tpend.TextSize = 30.000
 tpend.TextWrapped = true
 tpend.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(101.163, 308.224, -41.9034)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
 end)
