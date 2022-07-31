@@ -7,6 +7,7 @@ local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local tptool = Instance.new("TextButton")
 local tpend = Instance.new("TextButton")
+local anticheat = Instance.new("TextButton")
 
 --Properties:
 
@@ -65,4 +66,51 @@ tpend.MouseButton1Down:connect(function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 	end)
 	tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+anticheat.Name = "anticheat"
+anticheat.Parent = Frame
+anticheat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+anticheat.Position = UDim2.new(0.027, 0,0.568, 0)
+anticheat.Size = UDim2.new(0, 284, 0, 50)
+anticheat.Font = Enum.Font.SciFi
+anticheat.Text = "Bypass AC"
+anticheat.TextColor3 = Color3.fromRGB(0, 0, 0)
+anticheat.TextScaled = true
+anticheat.TextSize = 14.000
+anticheat.TextWrapped = true
+anticheat.MouseButton1Down:connect(function()
+	local reg = getreg()
+
+	for i, Function in next, reg do
+		if type(Function) == 'function' then
+			local info = getinfo(Function)
+
+			if info.name == 'kick' then
+				if (hookfunction(info.func, function(...)end)) then
+					print'succesfully hooked kick'
+				else
+					print'failed to hook kick'
+				end
+			end
+		end
+	end
+	local playerscripts = game:GetService'Players'.LocalPlayer.PlayerScripts
+
+	local script1 = playerscripts.LocalScript
+	local script2 = playerscripts.LocalScript2
+
+	local script1signal = script1.Changed
+	local script2signal = script2.Changed
+
+	for i, connection in next, getconnections(script1signal) do
+		connection:Disable()
+	end
+	for i, connection in next, getconnections(script2signal) do
+		connection:Disable()
+	end
+
+	script1:Destroy()
+	script2:Destroy()
+end)
 end)
