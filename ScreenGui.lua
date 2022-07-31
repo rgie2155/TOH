@@ -65,6 +65,20 @@ tpend.TextScaled = true
 tpend.TextSize = 30.000
 tpend.TextWrapped = true
 tpend.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/tpend.lua',true))()
+end)
+
+anticheat.Name = "anticheat"
+anticheat.Parent = Frame
+anticheat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+anticheat.Position = UDim2.new(0.027, 0,0.568, 0)
+anticheat.Size = UDim2.new(0, 284, 0, 50)
+anticheat.Font = Enum.Font.SciFi
+anticheat.Text = "Bypass AC"
+anticheat.TextColor3 = Color3.fromRGB(0, 0, 0)
+anticheat.TextScaled = true
+anticheat.TextSize = 14.000
+anticheat.TextWrapped = true
+anticheat.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
 end)
