@@ -2,4 +2,3 @@
  
     local player = game.Players.LocalPlayer.Character
     player.HumanoidRootPart.CFrame = endzone
-end
