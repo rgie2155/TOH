@@ -56,5 +56,5 @@ tpend.TextScaled = true
 tpend.TextSize = 30.000
 tpend.TextWrapped = true
 tpend.MouseButton1Down:connect(function()
-		
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
 end)
