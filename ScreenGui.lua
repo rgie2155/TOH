@@ -82,3 +82,23 @@ anticheat.TextWrapped = true
 anticheat.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/TOH/main/bypass.lua',true))()
 end)
+
+-- Scripts:
+
+local function LVKIELK_fake_script()
+	local script = Instance.new('LocalScript', Frame)
+
+	player = game.Players.LocalPlayer
+	
+	player:GetMouse().KeyDown:Connect(function(key)
+		if key == "RightCtrl" and script.Parent.Visible == false then
+			script.Parent.Visible = true
+		else
+			if key == "RightCtrl" and script.Parent.Visible == true then
+				script.Parent.Visible = false
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(LVKIELK_fake_script)()
