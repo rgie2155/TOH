@@ -98,7 +98,7 @@ help.TextWrapped = true
 
 -- Scripts:
 
-llocal function EKFTIU_fake_script()
+local function EKFTIU_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/Prison-Life/main/blacklist.lua',true))()
