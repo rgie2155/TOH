@@ -98,26 +98,26 @@ help.TextWrapped = true
 
 -- Scripts:
 
-local function VQNZI_fake_script()
+llocal function EKFTIU_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/rgie2155/Prison-Life/main/blacklist.lua',true))()
 	
 end
-coroutine.wrap(VQNZI_fake_script)()
-local function RRREGF_fake_script()
+coroutine.wrap(EKFTIU_fake_script)()
+local function NWEBE_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	player = game.Players.LocalPlayer
 	
 	player:GetMouse().KeyDown:Connect(function(key)
-		if key == "e" and script.Parent.Visible == false then
+		if key == "g" and script.Parent.Visible == false then
 			script.Parent.Visible = true
 		else
-			if key == "e" and script.Parent.Visible == true then
+			if key == "g" and script.Parent.Visible == true then
 				script.Parent.Visible = false
 			end
 		end
 	end)
 end
-coroutine.wrap(RRREGF_fake_script)()
+coroutine.wrap(NWEBE_fake_script)()
