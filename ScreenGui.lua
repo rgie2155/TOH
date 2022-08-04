@@ -118,6 +118,6 @@ local function RRREGF_fake_script()
 				script.Parent.Visible = false
 			end
 		end
-	
+	end)
 end
 coroutine.wrap(RRREGF_fake_script)()
